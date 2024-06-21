@@ -1,0 +1,58 @@
+{
+  "name": "LLVM Sandbox DevContainer",
+  "build": {
+    "dockerfile": "./Dockerfile",
+    "context": "."
+  },
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+  "workspaceFolder": "/workspace",
+  "remoteUser": "orphee",
+  "capAdd": ["SYS_PTRACE"],
+  "securityOpt": ["seccomp=unconfined"],
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "editor.renderWhitespace": "boundary",
+        "editor.wordWrap": "off",
+        "editor.fontFamily": "Cascadia Mono",
+        "editor.minimap.enabled": false,
+        "editor.fontLigatures": false,
+        "editor.cursorStyle": "block",
+        "editor.renderLineHighlight": "all",
+        "editor.formatOnSave": false,
+        "editor.suggest.preview": true,
+        "editor.bracketPairColorization.enabled": true,
+        "workbench.sideBar.location": "right",
+        "workbench.activityBar.location": "top",
+        "workbench.colorTheme": "Dracula",
+        "workbench.startupEditor": "none",
+        "terminal.integrated.fontFamily": "MesloLGM Nerd Font",
+        "telemetry.telemetryLevel": "off",
+        "extensions.ignoreRecommendations": true,
+        "cmake.configureOnOpen": false,
+        "cmake.automaticReconfigure": false,
+        "cmake.configureOnEdit": false,
+        "[json]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        "[jsonc]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
+        }
+      },
+      "extensions": [
+        "dracula-theme.theme-dracula",
+        "llvm-vs-code-extensions.vscode-mlir",
+        "llvm-vs-code-extensions.vscode-clangd",
+        "ms-vscode.cmake-tools",
+        "GitHub.vscode-github-actions",
+        "eamodio.gitlens",
+        "github.vscode-pull-request-github",
+        "davidanson.vscode-markdownlint",
+        "EditorConfig.EditorConfig",
+        "esbenp.prettier-vscode",
+        "redhat.vscode-yaml",
+        "ms-azuretools.vscode-docker"
+      ]
+    }
+  }
+}
