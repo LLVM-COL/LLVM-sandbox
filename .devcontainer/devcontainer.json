@@ -51,7 +51,9 @@
         "EditorConfig.EditorConfig",
         "esbenp.prettier-vscode",
         "redhat.vscode-yaml",
-        "ms-azuretools.vscode-docker"
+        "ms-azuretools.vscode-docker",
+        "ms-python.python",
+        "ms-python.black-formatter"
       ]
     }
   }
